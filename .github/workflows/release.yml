@@ -16,17 +16,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup PHP with composer
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          tools: composer:v2
 
       - name: Build project
         run: |
           cd /home/runner/work/geninventorynumber/
-          cd geninventorynumber && composer install --no-dev && cd ..
-          rm -r geninventorynumber/tools geninventorynumber/.git* geninventorynumber/composer.*
+          rm -r geninventorynumber/tools geninventorynumber/.git*
           tar -zcvf geninventorynumber-${{ github.ref_name }}.tgz geninventorynumber
 
       - name: Upload release
