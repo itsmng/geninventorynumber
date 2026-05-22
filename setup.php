@@ -65,7 +65,7 @@ function plugin_version_geninventorynumber() {
       'name'         => __('Inventory number generation', 'geninventorynumber'),
       'version'      => PLUGIN_GENINVENTORYNUMBER_VERSION,
       'author'       => "<a href='http://www.teclib.com'>TECLIB'</a> + KK",
-      'homepage'     => 'https://github.com/pluginsGLPI/geninventorynumber',
+      'homepage'     => 'https://github.com/itsmng/geninventorynumber',
       'license'      => 'GPLv2+',
       'requirements' => [
          'glpi' => [
